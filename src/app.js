@@ -24,7 +24,7 @@ app.use(session({
 app.set('views', path.join(__dirname,'../views')); // Para indicar la ruta de la carpeta de las vistas
 app.set('view engine', 'ejs'); // Para indicar el motor de plantillas
 
-app.listen(3014, ()=>{ // Levanta servidor en el puerto 3088
+app.listen(process.env.PORT ||3014, ()=>{ // Levanta servidor en el puerto 3088
     console.log( 'Servidor corriendo en puerto 3014'); // Para mostrar un mensaje en la consola
 });
 
